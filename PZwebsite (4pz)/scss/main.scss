@@ -1,0 +1,88 @@
+@import "./variables";
+
+main { 
+    background-color: $lblue;
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+}
+
+section{
+    width:60%;
+    margin-right: 2%;
+    a{
+        color: blue;
+        text-decoration: underline;
+        &:hover{
+            color: darkblue;
+            transition: 0.5s;
+        }
+        &:active{
+            color:purple;
+            transition: 0s;
+        }
+    }
+}
+
+@mixin shift{
+    display: flex;
+    max-width: 1200px;
+    width: 70%;
+    margin: auto;
+}
+
+.searchf{
+   @include shift;
+   align-items: center;
+    justify-content:space-between;
+}
+
+.upper{
+    @include shift;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.navig{
+    @include shift;
+    align-items: center;
+    justify-content: space-between;
+    font: 18pt monospace; 
+    margin-top: 10px; 
+}
+
+.maindiv{
+    @include shift;
+    border-left: map-get($line, _norm);
+    border-right: map-get($line, _norm);
+    background-color: white;
+}
+
+.gimg{
+    @extend .maindiv;
+    border-bottom: map-get($line, _norm);
+}
+
+footer{
+    display:flex;
+    justify-content: space-between;
+    border-top: map-get($line, _norm);
+    padding: 10px;
+}
+
+table, th, td {
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border: map-get($line, _fat);
+    text-indent: 4px;
+}
+
+article{
+    text-indent: 1.5em;
+    margin-top: 10px;
+    border-bottom: map-get($line, _norm) darkblue;
+}
+
+#news article:nth-last-of-type(1) {
+    border-bottom: map-get($line, _none);
+}
