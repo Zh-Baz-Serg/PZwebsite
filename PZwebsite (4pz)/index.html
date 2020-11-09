@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Site</title>
+    <link rel = "stylesheet" href="./scss/main.scss">
+    <link rel = "stylesheet" href="./scss/main.css">
+</head>
+<body>
+    <header>
+        <div class = "upper">
+            <div>
+                <h1 style = "font-family: monospace; color: darkblue"><strong> Hospital Website </strong></h1>
+            </div>
+
+           <div class = "logmenu">
+                <button type="button">Log in</button>
+                <button type="button">Sign up</button>
+           </div>            
+        </div>
+
+        <div>
+            <form class = "searchf">
+                <input required type="text" placeholder = "Info search..."/>
+                <button type="submit">Search</button>
+            </form>
+        </div>
+
+            <nav>
+                <ul class = "navig">
+                 <li><a href="#">Info</a></li>
+                 <li><a href="#news">News</a></li>
+                 <li><a href="#phonenums">Contacts</a></li>
+                 <li><a href="#phonenums">Feedback</a></li>
+                </ul>
+            </nav>
+    </header>
+
+    <div class = "centr">
+        <img src="./imgs/tphoto4.1.jpg" class = "gimg" alt="LOGO">
+    </div>
+
+    <main>
+        <div class = "maindiv">
+            <section>
+
+                <div>
+                    <h2><img src="./imgs/icopen.png" alt="icon">
+                    <a href="#"> Make appointment</a></h2>
+                </div>
+                <div>
+                    <h2><img src="./imgs/icoinf.png" alt="icon"> <u>Check appointment</u> <h2></h2>
+                    <form>
+                        <input required type="text" placeholder = "Client ID" id = "f1"><br>
+                        <div id = "f2">
+                            <input required type="text" placeholder = "Health card">
+                            <button type="submit">Search</button>
+                        </div>
+                    </form>
+                </div>
+                <h2 id = "newstitle"><u>News</u></h2>
+                <div id = "news">
+                    <article>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt sed illum provident laboriosam optio nulla at similique sequi quod blanditiis.</p>
+                    </article>
+                    <article>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum fuga labore voluptates nulla, rerum illo aspernatur dicta officiis deserunt autem harum delectus atque animi perferendis officia sit iusto nemo! Voluptatum!</p>
+                    </article>
+                    <article>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum facilis labore a dignissimos, odit distinctio aut maiores consequatur ex. Ab, eos et vel labore non amet praesentium doloribus ullam illo vero pariatur assumenda voluptates sapiente perferendis aspernatur accusantium eveniet. A.</p>
+                    </article>
+                    <article>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam aliquam eius facilis illum molestias? Commodi dicta blanditiis vero corporis cupiditate nesciunt excepturi sed deserunt debitis eveniet delectus iste sunt, explicabo, quae non aperiam consequatur ea laudantium tempore amet odio molestiae labore? Ex quam cum nam error neque rerum illum unde?</p>
+                    </article>
+                    <article>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur officia dolorum consequatur voluptates at! Eveniet sequi sint modi adipisci, facere deserunt nobis, incidunt quis voluptas cumque voluptates aperiam possimus recusandae accusamus libero asperiores maxime nihil.</p>
+                    </article>
+                    <article>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed repellendus corrupti quo ipsam ratione autem doloremque, voluptate praesentium suscipit, exercitationem ut harum maiores commodi natus porro aliquam numquam, perferendis laudantium totam reprehenderit cupiditate. Corrupti temporibus, quaerat aliquid aut error deleniti eum nisi quis velit perspiciatis placeat odio. Doloribus, omnis corporis sunt voluptatum amet nemo sapiente quidem fuga enim quibusdam quo.</p>
+                    </article>
+                    <article>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur vitae laboriosam id cum odio corrupti quasi deleniti qui, quos adipisci?</p>
+                    </article>
+                    <article>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, distinctio? Labore magni pariatur nulla rem ea aut facere commodi laudantium, excepturi molestias hic eaque? Nobis dignissimos pariatur possimus sit quisquam perferendis odit neque. Odio quas quia exercitationem repellendus fugit rem aperiam dolorem qui nam doloribus! Corporis dolorum soluta, dolor facilis minus officia fugit, ea voluptate dignissimos in culpa amet mollitia aut perferendis et. Accusantium tempora facilis ea, distinctio laboriosam corrupti!</p>
+                    </article>
+                    <article>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos, officiis placeat consequatur minus, ratione debitis expedita consequuntur est soluta totam velit illum inventore odio veniam quisquam dicta repellendus explicabo reprehenderit illo quaerat necessitatibus quas corporis adipisci autem. Neque ratione non, quod nulla velit laboriosam in.</p>
+                    </article>
+                    <article>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci impedit iste culpa fugiat veritatis aliquam?</p>
+                    </article>
+                    <article>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, mollitia nihil laborum possimus hic fugiat qui quam doloribus? Mollitia repellat neque, dolores officia labore harum temporibus dolorum quae libero id maxime quas iure!</p>
+                    </article>
+                </div>
+                <button type="more">More Info</button>
+
+                <div>
+                    <table>
+                        <tr>
+                            <td colspan="2">Timetable</td>
+                        </tr>
+                        <tr>
+                            <td>Monday</td>
+                            <td>Lorem, ipsum.</td>
+                        </tr>
+                        <tr>
+                            <td>Tuesday</td>
+                            <td>Lorem.</td>
+                        </tr>
+                        <tr>
+                            <td>Wednesday</td>
+                            <td>Lorem, ipsum dolor.</td>
+                        </tr>
+                        <tr>
+                            <td>Thursday</td>
+                            <td>Lorem ipsum dolor sit.</td>
+                        </tr>
+                        <tr>
+                            <td>Friday</td>
+                            <td>Lorem, ipsum dolor.</td>
+                        </tr>
+                    </table>
+                </div>
+            </section>
+
+            <aside>
+                <div>
+                    <div class = logh2>
+                        <h2><img src = "./imgs/icodoc.png" alt="dat"><u>Doctors</u></h2>
+                    </div>
+                    <form>
+                        <input required type="text" placeholder = "Doctor's name" pattern="[A-Za-z]" title= "Latin letters only" id = "f3">
+                        <div id = "f4">
+                            <select required>
+                                <option>Cardiologist</option>
+                                <option>Dermatolog</option>
+                                <option>Endocrinologist</option>
+                                <option>Family Physicians</option>
+                                <option>Gastroenterologists</option>
+                                <option>Hematologists</option>
+                                <option>Internists</option>
+                                <option>Nephrologists</option>
+                                <option>Neurologists</option>
+                                <option>Oncologists</option>
+                            </select>
+                            <button type="submit">Search</button>
+                        </div>
+                  </form>
+                </div>
+
+                <div>
+                    <h2><img src = "./imgs/icowalp.png" alt="dat"><u>Photo and media</u></h2>
+                    <div id = "floor">
+                        <img src="./imgs/tphoto1icon.png" alt="icon">
+                        <img src="./imgs/tphoto2icon.png" alt="icon">
+                    </div>
+                    <div id = "floor">
+                        <img src="./imgs/tphoto3icon.png" alt="icon">
+                        <img src="./imgs/tphoto5icon.png" alt="icon">
+                    </div>
+                    <div id = "photos">
+                        <button type="button"> More photos</button>
+                    </div>
+                </div>
+
+                <div id = "phonenums">
+                    <h2><img src = "./imgs/icophn.png" alt="dat"><u>Contact us</u></h2>
+                    <ul>
+                        <strong>
+                            <li><p>+38(099)8311327 - Lorem Ipsum</p></li>
+                            <li><p>+38(099)0542645 - Dolor Sit</p></li>
+                            <li><p>+38(099)5311364 - Amet Conser</p></li>
+                            <li><p>+38(099)5550383 - Adig Elit</p></li>
+                            <li><p>+38(099)8530306 - Sed Do</p></li>
+                        </strong>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </main>
+    <footer>
+        <p>2020 Все права не защищены ©</p>
+        <p>Donation: 5168 7574 0849 3064</p>
+    </footer>
+</body>
+</html>

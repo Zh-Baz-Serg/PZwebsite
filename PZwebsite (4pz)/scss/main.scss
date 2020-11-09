@@ -1,0 +1,331 @@
+@import "./variables";
+
+@mixin shift{
+    display: flex;
+    max-width: 1200px;
+    width: 70%;
+    margin: auto;
+}
+
+@mixin buttonstyle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:20%;
+    height: 30px;
+    border-radius: 15px;
+    background-color: map-get($blu, bright);
+    border: 2px solid rgb(20,100,246); 
+    margin-left: 1%; 
+    outline: none;
+    color: darkblue;
+    font-weight: bold;
+    font-family: Lucida;
+    font-size: 1.3vw;
+    &:hover{
+        border: map-get($line, _fat);;
+        cursor: pointer;
+        transition: 0.4s;
+        border-color:blue;
+        text-decoration: underline;
+    }
+    &:active{
+        border: 2px solid;
+        cursor: pointer;
+        transition: 0s;
+        background-color:blue;
+        border-color: blue;
+    }
+}
+
+*{padding:0; margin:0;}
+
+header{
+    border-bottom: map-get($line, _norm);
+    padding-top: 10px;
+    background-color: map-get($blu, med);
+    display: flex;
+    flex-direction:column;
+    justify-content: space-between;
+}
+
+main { 
+    background-color: map-get($blu, light);
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+}
+
+.logmenu{
+    margin: right;
+    display: flex;
+    max-width: 1200px;
+    width: 50%;
+    flex-direction: row-reverse;
+    button{ @include buttonstyle; }
+}
+
+.searchf{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+    flex-direction: row;
+    input{
+        width: 89%;
+        height: 20px;
+    }  
+    button{
+        @include buttonstyle;
+        display: flex;
+        border-radius: 10px;
+        width: 10%;
+        height: 23px;
+        margin-left: 1%;
+        outline: none;
+    }
+}
+
+input{
+    display: flex;
+    border: map-get($line, _norm);
+    padding-left: 10px;
+    border-radius: 10px;
+    outline:none;
+}
+
+nav ul{
+    list-style: none;
+    display:flex;
+    width:100%;
+    justify-content: space-around;
+    color: darkblue;
+    font-weight: bold;
+    font-family: helvetica;
+    li{
+        display: block;
+       a{
+            color: blue;
+            text-decoration: none;
+            &:hover{
+                color: black;
+                transition: 0.5s;
+            }
+        }
+    }
+}
+
+.centr{
+    background-color:  map-get($blu,light);
+}
+
+section{
+    width:60%;
+    margin-right: 2%;
+    a{
+        color: blue;
+        text-decoration: underline;
+        &:hover{
+            color: darkblue;
+            transition: 0.5s;
+        }
+        &:active{
+            color:purple;
+            transition: 0s;
+        }
+    }
+}
+
+.searchf{
+   @include shift;
+   align-items: center;
+    justify-content:space-between;
+}
+
+.upper{
+    @include shift;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.navig{
+    @include shift;
+    align-items: center;
+    justify-content: space-between;
+    font: 18pt monospace; 
+    margin-top: 10px; 
+    a:active{
+        color:purple;
+        transition: 0s;
+    }
+}
+
+.maindiv{
+    @include shift;
+    border-left: map-get($line, _norm);
+    border-right: map-get($line, _norm);
+    background-color: white;
+}
+
+.gimg{
+    @extend .maindiv;
+    border-bottom: map-get($line, _norm);
+}
+
+table, th, td {
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border: map-get($line, _fat);
+    text-indent: 4px;
+}
+
+#f1{
+    height: 20px;
+    margin-bottom:-12px;
+    margin-left:2%;
+    width: 96%
+}
+
+#f2{
+    display: flex;
+    margin-left:2%;
+    margin-bottom:10px;
+    input{
+        width: 80%;
+        height: 20px;
+    }
+    button{
+        @include buttonstyle;
+        width: 20%;
+        height: 23px; 
+        margin-left: 1%;
+    }
+}
+
+h2{
+    margin-left: 10%;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    u{
+        padding-left: 5%;
+    }
+    a{
+        padding-left: 5%;
+    }
+}
+
+#news{
+    overflow-y: scroll;
+    height: 450px;
+    border-top: 1px solid;
+    border-bottom: map-get($line, _norm);
+    p{
+        padding-bottom: 10px;
+    }
+}
+
+#newstitle{
+    text-align: center;
+    margin-left: 5%;
+    margin-right: 5%;
+    border-bottom: map-get($line, _norm);
+    u{
+        text-decoration: none;
+    }
+    
+}
+
+article{
+    text-indent: 1.5em;
+    margin-top: 10px;
+    border-bottom: map-get($line, _norm) darkblue;
+}
+
+#news article:nth-last-of-type(1) {
+    border-bottom: map-get($line, _none);
+}
+
+button[type="more"]{
+    @include buttonstyle;
+    margin-top: 10px;
+    width: 80%;
+    margin-left: 10%;
+    margin-bottom: 10px;
+}
+
+table{
+    margin-left: 5px;
+    margin-bottom: 5px; 
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+    tr [colspan="2"]{
+        text-align: center;
+    }
+}
+
+aside{
+    width:40%;
+    margin-right: 2%;
+}
+
+#f3{
+    height: 20px;
+    margin-bottom:5px;
+    width: 98%
+}
+
+select{
+    @extend input;
+}
+
+#f4{
+    display: flex;
+    margin-bottom:10px;
+    select{
+        width: 80%;
+        height: 20px;
+    }
+    button{
+        @include buttonstyle;
+        border-radius: 10px;
+        width: 20%;
+        height: 23px;
+        margin-left: 1%;
+        outline: none;
+    }
+}
+
+#floor{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4%;
+    img{
+        width:48%;
+        height:48%;
+    }
+}
+
+#photos{
+    margin: space-between;
+    margin-bottom: 10px;
+    button{
+        @include buttonstyle;
+        display: flex;
+        margin: auto;
+        width: 80%;
+    }
+}
+
+#phonenums ul li{
+    margin-left: 5%;
+    margin-bottom: 5px;
+    list-style: circle;
+}
+
+footer{
+    display:flex;
+    justify-content: space-between;
+    border-top: map-get($line, _norm);
+    padding: 10px;
+}
