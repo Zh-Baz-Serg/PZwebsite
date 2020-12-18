@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Site</title>
+    <script defer src="http://code.jquery.com/jquery-latest.min.js"></script> 
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery-chained/1.0.1/jquery.chained.js"></script> 
+    <script defer src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <script src="loadCSS.js"></script>
+    <script id="loadcss">
+        loadCSS( "./scss/shrink.css", document.getElementById("loadcss") );
+      </script>
+</head>
+
+<body>
+    <header>
+        <div class = "upper">
+            <div>
+                <h1 style = "font-family: monospace; color: darkblue"><strong> Hospital Website </strong></h1>
+            </div>
+           <div class = "logmenu">
+                <button type="button">Log in</button>
+                <button type="button">Sign up</button>
+           </div>            
+        </div>
+
+        <div id = "sec-block">
+            <form class = "searchf">
+                <input required type="text" placeholder = "Info search..."/>
+                <button type="submit">Search</button>
+            </form>
+        </div>
+            <nav>
+                <ul class = "navig">
+                 <li><a href="#">Info</a></li>
+                 <li><a href="#news">News</a></li>
+                 <li><a href="#phonenums">Contacts</a></li>
+                 <li><a href="#phonenums">Feedback</a></li>
+                </ul>
+            </nav>
+    </header>
+
+    <main>
+        <div class="slider_win">
+            <div class="slider">
+                <section><img srcset = "./imgs/tphoto2.1.jpg 1540w, ./imgs/tphoto2.1_small.jpg 643w , ./imgs/tphoto2.1_little.jpg 354w" alt="slide1"></section>
+                <section><img srcset = "./imgs/tphoto1.1.jpg 1540w, ./imgs/tphoto1.1_small.jpg 643w , ./imgs/tphoto1.1_little.jpg 354w" alt="slide2"></section>
+                <section><img srcset = "./imgs/tphoto4.1.jpg 1540w, ./imgs/tphoto4.1_small.jpg 643w , ./imgs/tphoto4.1_little.jpg 354w" alt="slide3"></section>
+                <section><img srcset = "./imgs/tphoto2.1.jpg 1540w, ./imgs/tphoto2.1_small.jpg 643w , ./imgs/tphoto2.1_little.jpg 354w" alt="slide4"></section>
+                <section><img srcset = "./imgs/tphoto1.1.jpg 1540w, ./imgs/tphoto1.1_small.jpg 643w , ./imgs/tphoto1.1_little.jpg 354w" alt="slide5"></section>
+            </div>
+            <div class="arrows">
+                <span class="arrow left"> &#11164  </span>
+                <span class="arrow right"> &#11166 </span>
+            </div>
+        </div>
+        <div>
+            <section><img data-src="./imgs/adv_a.jpg" alt="Ad1" class = "adv_a lazy"></section>
+            <section><img  data-src="./imgs/adv_b.jpg" alt="Ad2" class = "adv_b lazy"></section>
+        </div>
+        <div class = "maindiv">
+            <section>
+                    <div class = "titleline">
+                        <img class = "icon lazy" data-src="./imgs/icopen.png" alt="icon">
+                        <div>
+                            <button data-modal-target="#modal">Make appointment</button>
+                        </div>
+                    </div>
+                    <div class="modal" id="modal">
+                        <div class="modal-header">
+                            <div class="title">Choose your hospital</div>
+                            <button data-close-button class="close-button">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <form id = "ModForm">
+                                <div>Country</div>
+                                <select required id = "CountryApp">
+                                    <option value = "">Choose country</option>
+                                    <option value = "Canada">Canada</option>  
+                                    <option value = "Germany">Germany</option>
+                                    <option value = "United States">United States</option>  
+                                </select>
+                                <div>City</div>
+                                <select required id = "CityApp">
+                                    <option value = "">Choose city</option>
+                                    <option value = "Toronto" class = "Canada">Toronto</option>  
+                                    <option value = "Montreal" class = "Canada">Montreal</option>
+                                    <option value = "Vancouver" class = "Canada">Vancouver</option>
+                                    <option value = "Berlin" class = "Germany">Berlin</option>  
+                                    <option value = "Hamburg" class = "Germany">Hamburg</option>
+                                    <option value = "Munich" class = "Germany">Munich</option>
+                                    <option value = "New York" class = "United States">New York</option>  
+                                    <option value = "Los Angeles" class = "United States">Los Angeles</option>
+                                    <option value = "Chicago" class = "United States">Chicago</option>  
+                                </select>
+                                <div>Hospital</div>
+                                <select required id = "HospApp">
+                                    <option value = "">Choose hospital</option>
+                                    <option value = "C-T-0" class = "Toronto">C-T-0</option>  
+                                    <option value = "C-T-1" class = "Toronto">C-T-1</option>
+                                    <option value = "C-M-0" class = "Montreal">C-M-0</option>
+                                    <option value = "C-M-1" class = "Montreal">C-M-1</option>  
+                                    <option value = "C-V-0" class = "Vancouver">C-V-0</option>
+                                    <option value = "C-V-1" class = "Vancouver">C-V-1</option>
+                                    <option value = "G-B-0" class = "Berlin">G-B-0</option>  
+                                    <option value = "G-B-1" class = "Berlin">G-B-1</option>
+                                    <option value = "G-H-0" class = "Hamburg">G-H-0</option>  
+                                    <option value = "G-H-1" class = "Hamburg">G-H-1</option>
+                                    <option value = "G-M-0" class = "Munich">G-M-0</option>  
+                                    <option value = "G-M-1" class = "Munich">G-M-1</option>
+                                    <option value = "U-N-0" class = "New York">U-N-0</option>
+                                    <option value = "U-N-1" class = "New York">U-N-1</option>  
+                                    <option value = "U-L-0" class = "Los Angeles">U-L-0</option>
+                                    <option value = "U-L-1" class = "Los Angeles">U-L-1</option>
+                                    <option value = "U-C-0" class = "Chicago">U-C-0</option>  
+                                    <option value = "U-C-1" class = "Chicago">U-C-1</option>  
+                                </select>
+                                <div>Time</div>
+                                <select required id = "TimepApp">
+                                    <option value = "">Choose time</option>
+                                    <option value = "8:00" class = "Munich">8:00</option>  
+                                    <option value = "8:30" class = "Canada">8:30</option>  
+                                    <option value = "9:00" class = "Canada">9:00</option>
+                                    <option value = "9:30" class = "Canada">9:30</option>
+                                    <option value = "10:00" class = "Germany">10:00</option>  
+                                    <option value = "10:30" class = "Germany">10:30</option>
+                                    <option value = "11:00" class = "Germany">11:00</option>
+                                </select>
+                                <button type="submit">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div id="overlay"></div>
+                <div>
+                    <div class = "titleline">
+                        <img class = "icon lazy" data-src="./imgs/icoinf.png" alt="icon"> 
+                        <div>
+                            <h2>Check appointment</h2>
+                        </div>
+                    </div>
+                    <form id = "form1">
+                        <div id = "f1"><input type="text" placeholder = "Client ID" id = "f11"></div>
+                        <div id = "error1"></div>
+                        <div id = "f2">
+                            <input type="text" id = "HealthCard" placeholder = "Health card">
+                            <button type="submit">Search</button>
+                        </div>
+                        <div id = "error2"></div>
+                    </form>
+                </div>
+                <h2 id = "newstitle">News</h2>
+                <div id = "news">
+                    <article>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt sed illum provident laboriosam optio nulla at similique sequi quod blanditiis.</p>
+                    </article>
+                    <article>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum fuga labore voluptates nulla, rerum illo aspernatur dicta officiis deserunt autem harum delectus atque animi perferendis officia sit iusto nemo! Voluptatum!</p>
+                    </article>
+                    <article>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum facilis labore a dignissimos, odit distinctio aut maiores consequatur ex. Ab, eos et vel labore non amet praesentium doloribus ullam illo vero pariatur assumenda voluptates sapiente perferendis aspernatur accusantium eveniet. A.</p>
+                    </article>
+                    <article>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam aliquam eius facilis illum molestias? Commodi dicta blanditiis vero corporis cupiditate nesciunt excepturi sed deserunt debitis eveniet delectus iste sunt, explicabo, quae non aperiam consequatur ea laudantium tempore amet odio molestiae labore? Ex quam cum nam error neque rerum illum unde?</p>
+                    </article>
+                    <article>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur officia dolorum consequatur voluptates at! Eveniet sequi sint modi adipisci, facere deserunt nobis, incidunt quis voluptas cumque voluptates aperiam possimus recusandae accusamus libero asperiores maxime nihil.</p>
+                    </article>
+                    <article>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed repellendus corrupti quo ipsam ratione autem doloremque, voluptate praesentium suscipit, exercitationem ut harum maiores commodi natus porro aliquam numquam, perferendis laudantium totam reprehenderit cupiditate. Corrupti temporibus, quaerat aliquid aut error deleniti eum nisi quis velit perspiciatis placeat odio. Doloribus, omnis corporis sunt voluptatum amet nemo sapiente quidem fuga enim quibusdam quo.</p>
+                    </article>
+                    <article>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur vitae laboriosam id cum odio corrupti quasi deleniti qui, quos adipisci?</p>
+                    </article>
+                    <article>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, distinctio? Labore magni pariatur nulla rem ea aut facere commodi laudantium, excepturi molestias hic eaque? Nobis dignissimos pariatur possimus sit quisquam perferendis odit neque. Odio quas quia exercitationem repellendus fugit rem aperiam dolorem qui nam doloribus! Corporis dolorum soluta, dolor facilis minus officia fugit, ea voluptate dignissimos in culpa amet mollitia aut perferendis et. Accusantium tempora facilis ea, distinctio laboriosam corrupti!</p>
+                    </article>
+                    <article>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos, officiis placeat consequatur minus, ratione debitis expedita consequuntur est soluta totam velit illum inventore odio veniam quisquam dicta repellendus explicabo reprehenderit illo quaerat necessitatibus quas corporis adipisci autem. Neque ratione non, quod nulla velit laboriosam in.</p>
+                    </article>
+                    <article>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci impedit iste culpa fugiat veritatis aliquam?</p>
+                    </article>
+                    <article>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, mollitia nihil laborum possimus hic fugiat qui quam doloribus? Mollitia repellat neque, dolores officia labore harum temporibus dolorum quae libero id maxime quas iure!</p>
+                    </article>
+                    <article>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur vitae laboriosam id cum odio corrupti quasi deleniti qui, quos adipisci?</p>
+                    </article>
+                    <article>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum facilis labore a dignissimos, odit distinctio aut maiores consequatur ex. Ab, eos et vel labore non amet praesentium doloribus ullam illo vero pariatur assumenda voluptates sapiente perferendis aspernatur accusantium eveniet. A.</p>
+                    </article>
+                    <article>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci impedit iste culpa fugiat veritatis aliquam?</p>
+                    </article>
+                    <article>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, distinctio? Labore magni pariatur nulla rem ea aut facere commodi laudantium, excepturi molestias hic eaque? Nobis dignissimos pariatur possimus sit quisquam perferendis odit neque. Odio quas quia exercitationem repellendus fugit rem aperiam dolorem qui nam doloribus! Corporis dolorum soluta, dolor facilis minus officia fugit, ea voluptate dignissimos in culpa amet mollitia aut perferendis et. Accusantium tempora facilis ea, distinctio laboriosam corrupti!</p>
+                    </article>
+                </div>
+                <div class = "moreinf">
+                <button type="more">More Info</button>
+                </div>
+                <div class = "dtbtn">
+                    <button class = "tbtn1">1 Week</button>
+                    <button class = "tbtn2">2 Week</button>
+                    <button class = "tbtn3">3 Week</button>
+                </div>
+                    <table class = "h_table1">
+                        <tr>
+                            <td colspan="2">Timetable</td>
+                        </tr>
+                        <tr>
+                            <td>Monday</td>
+                            <td>Lorem, ipsum.</td>
+                        </tr>
+                        <tr>
+                            <td>Tuesday</td>
+                            <td>Lorem.</td>
+                        </tr>
+                        <tr>
+                            <td>Wednesday</td>
+                            <td>Lorem, ipsum dolor.</td>
+                        </tr>
+                        <tr>
+                            <td>Thursday</td>
+                            <td>Lorem ipsum.</td>
+                        </tr>
+                        <tr>
+                            <td>Friday</td>
+                            <td>Lorem, ipsum dolor.</td>
+                        </tr>
+                    </table>
+                    <table class = "h_table2">
+                        <tr>
+                            <td colspan="2">Timetable</td>
+                        </tr>
+                        <tr>
+                            <td>Monday</td>
+                            <td>Ador.</td>
+                        </tr>
+                        <tr>
+                            <td>Tuesday</td>
+                            <td>Ador terum.</td>
+                        </tr>
+                        <tr>
+                            <td>Wednesday</td>
+                            <td>Ador.</td>
+                        </tr>
+                        <tr>
+                            <td>Thursday</td>
+                            <td>Ador terum hogor.</td>
+                        </tr>
+                        <tr>
+                            <td>Friday</td>
+                            <td>Ador.</td>
+                        </tr>
+                    </table>
+                    <table class = "h_table3">
+                        <tr>
+                            <td colspan="2">Timetable</td>
+                        </tr>
+                        <tr>
+                            <td>Monday</td>
+                            <td>Ferrur tonor jeno.</td>
+                        </tr>
+                        <tr>
+                            <td>Tuesday</td>
+                            <td>Ferrur</td>
+                        </tr>
+                        <tr>
+                            <td>Wednesday</td>
+                            <td>Ferrur tonor jeno.</td>
+                        </tr>
+                        <tr>
+                            <td>Thursday</td>
+                            <td>Ferrur tonor</td>
+                        </tr>
+                        <tr>
+                            <td>Friday</td>
+                            <td>Ferrur tonor</td>
+                        </tr>
+                    </table>
+                    <div class="Accord">
+                        <ul>
+                            <li>
+                                <h3 class="Aline">Lorem ipsum, dolor sit amet consectetur</h3>
+                                <div class="Acontent">
+                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum ducimus earum impedit, maiores rerum, necessitatibus sit amet incidunt autem vitae est? Cupiditate quam ex similique placeat a beatae, et sit minus reprehenderit, in fugiat consectetur laboriosam. Autem officiis qui voluptate quidem nesciunt nulla, sint perspiciatis sunt voluptas, nobis soluta vero?
+                                </div>
+                            </li>
+                            <li>
+                                <h3 class="Aline">Lorem ipsum, dolor sit amet</h3>
+                                <div class="Acontent">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut eum aperiam quia corrupti, voluptas nihil est necessitatibus assumenda labore ipsum iusto temporibus eos totam nam cumque hic animi consectetur fuga odit laboriosam natus laudantium repellendus? Facilis repellat possimus laudantium illo neque fuga impedit voluptate, voluptatem corrupti sequi, alias, eaque quas.
+                                </div>
+                            </li>
+                            <li>
+                                <h3 class="Aline">Lorem ipsum dolor sit amet consectetur adipisicing</h3>
+                                <div class="Acontent">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum iste sint aut odit hic, adipisci eaque tenetur molestias placeat totam quis ab reiciendis, quas laborum vel atque! Doloribus sequi quia ratione tenetur veritatis voluptates corrupti, in nobis consectetur dignissimos aut consequatur possimus odio qui esse, autem veniam laboriosam earum adipisci.
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+            </section>
+
+            <aside>
+                <div>
+                   <div class = "titleline">
+                        <img class = "icon lazy" data-src = "./imgs/icodoc.png" alt="dat">
+                        <div>
+                        <h2>Doctors</h2>
+                        </div>
+                    </div>
+                    <form id = "form2">
+                        <input type="text" placeholder = "Doctor's name" id = "f3">
+                        <div id = "error3"></div>
+                        <div id = "f4">
+                            <select required>
+                                <option value = "">Choose specialty</option>
+                                <option>Cardiologist</option>
+                                <option>Dermatolog</option>
+                                <option>Endocrinologist</option>
+                                <option>Family Physicians</option>
+                                <option>Gastroenterologists</option>
+                                <option>Hematologists</option>
+                                <option>Internists</option>
+                                <option>Nephrologists</option>
+                                <option>Neurologists</option>
+                                <option>Oncologists</option>
+                            </select>
+                            <button type="submit">Search</button>
+                        </div>
+                  </form>
+                </div>
+
+                <div>
+                    <div class = "titleline">
+                        <img class = "icon lazy" data-src = "./imgs/icowalp.png" alt="dat">
+                        <div>
+                            <h2>Photo and media</h2>
+                        </div>
+                    </div>
+                    <div id = "floor">
+                        <img class = "lazy" data-src="./imgs/tphoto1icon.png" alt="icon">
+                        <img class = "lazy" data-src="./imgs/tphoto2icon.png" alt="icon">
+                    </div>
+                    <div id = "floor">
+                        <img class = "lazy" data-src="./imgs/tphoto3icon.png" alt="icon">
+                        <img class = "lazy" data-src="./imgs/tphoto5icon.png" alt="icon">
+                    </div>
+                    <div id = "photos">
+                        <button type="button"> More photos</button>
+                    </div>
+                </div>
+
+                <div id = "phonenums">
+                    <div class = "titleline">
+                        <img class = "icon lazy" data-src = "./imgs/icophn.png" alt="dat">
+                        <div class = "testcl">
+                            <h2>Contact us</h2>
+                        </div>
+                    </div>
+                    <ul id = "phlist">
+                            <li><p><strong>+38(099)8311327 - Lorem Ipsum</strong></p></li>
+                            <li><p><strong>+38(099)0542645 - Dolor Sit</strong></p></li>
+                            <li><p><strong>+38(099)5311364 - Amet Conser</strong></p></li>
+                            <li><p><strong>+38(099)5550383 - Adig Elit</strong></p></li>
+                            <li><p><strong>+38(099)8530306 - Sed Do</strong></p></li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </main>
+    <footer>
+        <p>2020 Все права не защищены ©</p>
+        <p>Donation: 5168 7574 0849 3064</p>
+    </footer>
+    <script defer src="app.js"></script>
+    <script defer src = "jquery.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.3.0/dist/lazyload.min.js"></script>
+    <script>
+        var lazyLoadInstance = new LazyLoad({
+        elements_selector: ".lazy"
+        });
+    </script>
+</body>
+</html>
